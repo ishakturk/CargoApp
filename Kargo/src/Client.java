@@ -14,15 +14,8 @@ public class Client {
         this.cargoHistory = new LinkedList<>();
     }
 
-    public Client(int id, String name, String surname, LinkedList<Cargo> cargoHistory) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.cargoHistory = cargoHistory;
-    }
-
     public void addCargoToClient(Cargo cargo) {
-        // Tarihe göre ters sıralı bir şekilde ekleme (yeni tarihler önce)
+        // Insert in reverse order by date (new dates first)
         int index = 0;
         while (index < cargoHistory.size() && cargoHistory.get(index).getDate().before(cargo.getDate())) {
             index++;
@@ -30,23 +23,23 @@ public class Client {
         cargoHistory.add(index, cargo);
     }
 
-    // Son gönderilen 5 kargoyu stack ile sorgulama
+    // Querying the last 5 shipments with stack
     public void getLast5Cargos() {
         if (cargoHistory.isEmpty()) {
             System.out.println("Gönderim geçmişi boş!");
             return;
         }
 
-        // Stack oluşturuluyor
+        // Creating a stack
         Stack<Cargo> stack = new Stack<>();
 
-        // Son 5 kargoyu yığına ekleyelim
+        // Add the last 5 cargoes to the stack
         int startIndex = Math.max(0, cargoHistory.size() - 5);
         for (int i = startIndex; i < cargoHistory.size(); i++) {
             stack.push(cargoHistory.get(i)); // Son 5 kargoyu stack'e ekle
         }
 
-        // Yığındaki kargaları ekrana yazdıralım
+        // Print the crows in the stack on the screen
         System.out.println("Son 5 Kargo:");
         while (!stack.isEmpty()) {
             System.out.println(stack.pop()); // Son eklenen kargo önce çıkacak

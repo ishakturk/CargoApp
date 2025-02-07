@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Kullanıcıları saklamak için bir HashMap (ID -> Client)
+        // A HashMap to store users (ID -> Client)
         Map<Integer, Client> userDatabase = new HashMap<>();
 
-        // Şehir ağacı oluştur
+        // Create a city tree
         CityNode central = new CityNode("ANKARA", 1);
         CityNode cityA = new CityNode("İSTANBUL", 2);
         CityNode cityB = new CityNode("BURSA", 3);
@@ -23,7 +23,7 @@ public class Main {
 
         CityTree cityTree = new CityTree(central);
 
-        // CargoManager oluştur
+        // Create CargoManager
         CargoManager cargoManager = new CargoManager(cityTree);
 
         Client currentClient = null;
@@ -38,7 +38,7 @@ public class Main {
             scanner.nextLine();
 
             switch (mainChoice) {
-                case 1: // Kullanıcı Kayıt
+                case 1: // User Registration
                     System.out.print("Adınız: ");
                     String name = scanner.nextLine();
                     System.out.print("Soyadınız: ");
@@ -56,7 +56,7 @@ public class Main {
                     }
                     break;
 
-                case 2: // Kullanıcı Giriş
+                case 2: // User Login
                     System.out.print("Kullanıcı ID: ");
                     int userId = scanner.nextInt();
                     scanner.nextLine();
@@ -70,7 +70,7 @@ public class Main {
                     }
                     break;
 
-                case 0: // Çıkış
+                case 0: // Exit
                     System.out.println("Çıkış yapılıyor...");
                     scanner.close();
                     return;

@@ -1,20 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class CityTree {
     private CityNode root;
 
-    // Constructor
     public CityTree(CityNode root) {
         this.root = root;
     }
 
-    // Root getter
     public CityNode getRoot() {
         return root;
     }
 
-    // Şehri ID ile bulma
     public CityNode findCityById(CityNode currentNode, int cityId) {
         if (currentNode == null) {
             return null;
@@ -34,25 +28,23 @@ public class CityTree {
         return null;
     }
 
-    // Ağacı yazdırma
     public void printTree(CityNode currentNode, int depth) {
         if (currentNode == null) {
             return;
         }
 
-        // Mevcut düğümü yazdır
+        // Print the current node
         System.out.println("-".repeat(depth) + " " + currentNode.getCityName() + " (ID: " + currentNode.getCityId() + ")");
         for (Cargo cargo : currentNode.getCargos()) {
             System.out.println(" ".repeat(depth + 2) + "* Kargo ID: " + cargo.getId() + ", Durum: " + cargo.getStatus());
         }
 
-        // Çocuk düğümleri yazdır
+        // Print child nodes
         for (CityNode child : currentNode.getChildren()) {
             printTree(child, depth + 2);
         }
     }
 
-    // Kargoyu ilgili şehre ekleme
     public void addCargoToCity(int cityId, Cargo cargo) {
         CityNode city = findCityById(root, cityId);
         if (city != null) {
