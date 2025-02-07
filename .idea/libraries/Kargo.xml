@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Kargo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Kargo/out/artifacts/Kargo_jar/Kargo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
