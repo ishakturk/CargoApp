@@ -1,14 +1,14 @@
-# model.Cargo Management System
+# Cargo Management System
 
 ## Overview
-This application is a console-based cargo management system developed in Java. It utilizes various data structures like Linked List, Priority Queue, Tree, Stack, and HashMap to efficiently manage cargo operations. The system is compiled using **JDK 23**, and the executable JAR file is named **Kargo.jar**.
+This application is a console-based cargo management system developed in Java. It utilizes various data structures like Linked List, Priority Queue, Tree, Stack, and HashMap to efficiently manage cargo operations. The system is compiled using **JDK 23**, and the executable JAR file is named **kargouygulama.jar**.
 
 ## Features
 - **Customer Data Management** using Linked List
-- **model.Cargo Prioritization** with Priority Queue
+- **Cargo Prioritization** with Priority Queue
 - **Delivery Route Management** using Tree Data Structure
 - **Shipping History Tracking** with Stack
-- **Sorting model.Cargo model.Status** using Timsort and Merge Sort
+- **Sorting Cargo model.Status** using Timsort and Merge Sort
 - **Delivery Time Estimation** based on Tree Depth
 - **Unique User ID Assignment** with HashMap
 
@@ -26,13 +26,13 @@ This application is a console-based cargo management system developed in Java. I
 
 ### Step 2: Run the JAR File
 1. Open the **command prompt** (Windows: `cmd`, Mac/Linux: `Terminal`).
-2. Navigate to the directory where **Kargo.jar** is located:
+2. Navigate to the directory where **kargouygulama.jar** is located:
    ```sh
-   cd Kargo/out/artifacts/Kargo_jar/Kargo.jar
+   cd out/artifacts/kargouygulama_jar/kargouygulama.jar
    ```
 3. Run the JAR file using:
    ```sh
-   java -jar Kargo.jar
+   java -jar kargouygulama.jar
    ```
 
 ## System Flow
@@ -47,18 +47,35 @@ This application is a console-based cargo management system developed in Java. I
    - Exit the system using the **Logout** option.
 
 ### Main Menu Options
-1. **Add model.Cargo:**
-   - Input **model.Cargo ID, Date, model.Status (Processed, On Delivery, Delivered), and City ID**.
-   - The system calculates **delivery time** based on city depth in the tree structure.
-2. **List My Last 5 model.Cargo Shipments:**
-3. **Search model.Cargo by ID:**
-4. **List Delivered model.Cargo:**
-5. **List Undelivered model.Cargo:**
-6. **Print model.Cargo Routes:**
-7. **Process Priority model.Cargo:**
-8. **Print City Tree Structure:**
-9. **Exit System**
+1. **Register:**
+   
+   ![register](https://github.com/user-attachments/assets/a247113c-0cfa-45d2-a20d-01bd01a54f05)
+   
+2. **Login:**
 
+   ![login](https://github.com/user-attachments/assets/0778cc50-8ad1-4bed-835b-368445a95ac6)
+   
+3. **Main:**
+   
+   ![main](https://github.com/user-attachments/assets/9f6a7260-96d8-4bb9-9298-e4c8f730f047)
+   
+4. **Add New Cargo:**
+   
+   ![add-new-cargo](https://github.com/user-attachments/assets/189c645b-4fc0-4c91-986c-431756e94c8f)
+   
+5. **Search Cargo:**
+    
+   ![search-cargo](https://github.com/user-attachments/assets/7c8ed909-b3c9-4420-aec4-6cd614f22e96)
+
+6. **View Shipment:**
+    
+   ![view-shipments](https://github.com/user-attachments/assets/565d293d-c15a-4cb4-b579-7c76c5ca660d)
+
+7. **City Tree:**
+    
+   ![city-tree](https://github.com/user-attachments/assets/1cc881cb-466d-4343-b16b-0e4f8ee355d9)
+
+   
 ## Data Structures Used
 ### 1. **Linked List** (Customer Data Management)
 - Efficient for **dynamic memory allocation** and **fast insert/delete operations**.
