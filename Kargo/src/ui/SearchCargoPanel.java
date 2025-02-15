@@ -1,3 +1,9 @@
+package ui;
+
+import model.Cargo;
+import model.Client;
+import service.CargoManager;
+
 import javax.swing.*;
 
 import java.awt.*;

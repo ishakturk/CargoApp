@@ -1,11 +1,11 @@
-# UI Implementation Plan for Cargo Management System Using Java Swing
+# UI Implementation Plan for model.Cargo Management System Using Java Swing
 
 ## 1. UI Components Breakdown
 
 **Frames/Dialogs:**
-- LoginFrame
-- RegistrationFrame
-- MainDashboardFrame
+- ui.LoginFrame
+- ui.RegistrationFrame
+- ui.MainDashboardFrame
 - AddCargoFrame
 - SearchCargoFrame
 - CargoListFrame
@@ -49,33 +49,33 @@
 ### 2.2 Main Dashboard
 
 **Components:**
-- Menu bar with options: "Add Cargo," "View History," "Search," etc.
-- Grid of buttons for quick actions (e.g., "Add Cargo," "Process Priority").
+- Menu bar with options: "Add model.Cargo," "View History," "Search," etc.
+- Grid of buttons for quick actions (e.g., "Add model.Cargo," "Process Priority").
 - Logout button (returns to login screen).
 
-### 2.3 Add Cargo Screen
+### 2.3 Add model.Cargo Screen
 
 **Form:**
-- Cargo ID (text field).
+- model.Cargo ID (text field).
 - Date (text field with date picker or validation).
-- Status (dropdown: Processed/On Delivery/Delivered).
+- model.Status (dropdown: Processed/On Delivery/Delivered).
 - City ID (text field).
 - **Submit Button:**
     - Calls backend `addCargo()` method.
     - Displays estimated delivery time (from tree depth calculation) in a dialog.
 
-### 2.4 Cargo List Screens
+### 2.4 model.Cargo List Screens
 
 **Last 5 Shipments:**
-- `JTable` with columns: Cargo ID, Date, Status, City.
+- `JTable` with columns: model.Cargo ID, Date, model.Status, City.
 - Data fetched from backend `Stack`.
 
 **Delivered/Undelivered Lists:**
 - Filtered tables using backend `Timsort` / `Merge Sort`.
 
-### 2.5 Search Cargo Screen
+### 2.5 Search model.Cargo Screen
 
-- **Search Bar:** Input for Cargo ID.
+- **Search Bar:** Input for model.Cargo ID.
 - **Results Panel:** Displays cargo details (status, city, delivery time) in a text area.
 
 ### 2.6 City Tree and Route Visualization
@@ -87,7 +87,7 @@
 **Route Display:**
 - Textual path (e.g., "Warehouse → City A → City B") using depth-first traversal.
 
-### 2.7 Priority Cargo Processing
+### 2.7 Priority model.Cargo Processing
 
 **Panel:**
 - Displays next priority cargo (from `PriorityQueue`).
@@ -95,11 +95,11 @@
 
 ## 3. Navigation Flow
 
-**Start:** `LoginFrame` → (Successful login) → `MainDashboardFrame`.
-**Registration:** `LoginFrame` → `RegistrationFrame` → (Back to Login).
+**Start:** `ui.LoginFrame` → (Successful login) → `ui.MainDashboardFrame`.
+**Registration:** `ui.LoginFrame` → `ui.RegistrationFrame` → (Back to Login).
 
 **Main Dashboard Actions:**
-- "Add Cargo" → `AddCargoFrame`.
+- "Add model.Cargo" → `AddCargoFrame`.
 - "View Last 5" → `CargoListFrame` (filtered to last 5).
 - "Search" → `SearchCargoFrame`.
 - "View City Tree" → `CityTreeFrame`.
@@ -109,12 +109,12 @@
 ## 4. Backend Integration
 
 **Data Binding:**
-- `AddCargoFrame` calls `CargoManager.addCargo(...)`.
-- `SearchCargoFrame` uses `CargoManager.searchCargo(id)`.
+- `AddCargoFrame` calls `service.CargoManager.addCargo(...)`.
+- `SearchCargoFrame` uses `service.CargoManager.searchCargo(id)`.
 - Priority processing uses `PriorityQueue.poll()`.
 
 **Tree Depth Calculation:**
-- `CityTree.getDepth(cityId)` for delivery time estimation.
+- `model.CityTree.getDepth(cityId)` for delivery time estimation.
 
 **Sorting:**
 - `MergeSort.sort(deliveredCargoList)` for status-based lists.
@@ -124,7 +124,7 @@
 1. **Setup Project:**
     - Import existing backend code into a new Java Swing project.
 2. **Create Authentication Screens:**
-    - Implement `LoginFrame` and `RegistrationFrame` with input validation.
+    - Implement `ui.LoginFrame` and `ui.RegistrationFrame` with input validation.
 3. **Build Main Dashboard:**
     - Use `CardLayout` to manage feature panels.
 4. **Develop Feature Screens:**

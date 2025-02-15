@@ -1,3 +1,10 @@
+package ui;
+
+import model.CityNode;
+import model.CityTree;
+import model.Client;
+import service.CargoManager;
+
 import javax.swing.*;
 import javax.swing.border.*;
 

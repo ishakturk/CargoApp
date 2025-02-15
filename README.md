@@ -1,14 +1,14 @@
-# Cargo Management System
+# model.Cargo Management System
 
 ## Overview
 This application is a console-based cargo management system developed in Java. It utilizes various data structures like Linked List, Priority Queue, Tree, Stack, and HashMap to efficiently manage cargo operations. The system is compiled using **JDK 23**, and the executable JAR file is named **Kargo.jar**.
 
 ## Features
 - **Customer Data Management** using Linked List
-- **Cargo Prioritization** with Priority Queue
+- **model.Cargo Prioritization** with Priority Queue
 - **Delivery Route Management** using Tree Data Structure
 - **Shipping History Tracking** with Stack
-- **Sorting Cargo Status** using Timsort and Merge Sort
+- **Sorting model.Cargo model.Status** using Timsort and Merge Sort
 - **Delivery Time Estimation** based on Tree Depth
 - **Unique User ID Assignment** with HashMap
 
@@ -47,15 +47,15 @@ This application is a console-based cargo management system developed in Java. I
    - Exit the system using the **Logout** option.
 
 ### Main Menu Options
-1. **Add Cargo:**
-   - Input **Cargo ID, Date, Status (Processed, On Delivery, Delivered), and City ID**.
+1. **Add model.Cargo:**
+   - Input **model.Cargo ID, Date, model.Status (Processed, On Delivery, Delivered), and City ID**.
    - The system calculates **delivery time** based on city depth in the tree structure.
-2. **List My Last 5 Cargo Shipments:**
-3. **Search Cargo by ID:**
-4. **List Delivered Cargo:**
-5. **List Undelivered Cargo:**
-6. **Print Cargo Routes:**
-7. **Process Priority Cargo:**
+2. **List My Last 5 model.Cargo Shipments:**
+3. **Search model.Cargo by ID:**
+4. **List Delivered model.Cargo:**
+5. **List Undelivered model.Cargo:**
+6. **Print model.Cargo Routes:**
+7. **Process Priority model.Cargo:**
 8. **Print City Tree Structure:**
 9. **Exit System**
 
@@ -64,11 +64,11 @@ This application is a console-based cargo management system developed in Java. I
 - Efficient for **dynamic memory allocation** and **fast insert/delete operations**.
 - Alternative: `ArrayList` or `HashMap`.
 
-### 2. **Priority Queue** (Cargo Prioritization)
+### 2. **Priority Queue** (model.Cargo Prioritization)
 - Helps sort **urgent deliveries**.
 - Alternative: `Heap` (Min-Heap for fast sorting by priority).
 
-### 3. **Tree Data Structure** (Cargo Routing)
+### 3. **Tree Data Structure** (model.Cargo Routing)
 - The root node represents the **central warehouse**, while child nodes represent **delivery cities**.
 - Used for **hierarchical delivery tracking and shortest route calculations**.
 

@@ -1,3 +1,9 @@
+package ui;
+
+import model.Cargo;
+import model.Client;
+import model.Status;
+
 import javax.swing.*;
 import javax.swing.table.*;
 import java.awt.*;
@@ -80,7 +86,7 @@ public class CargoListPanel extends JPanel {
             }
         };
         
-        // Status column renderer
+        // model.Status column renderer
         DefaultTableCellRenderer statusRenderer = new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value,
@@ -106,7 +112,7 @@ public class CargoListPanel extends JPanel {
         // Apply the renderers to columns
         for (int i = 0; i < cargoTable.getColumnCount(); i++) {
             TableColumn column = cargoTable.getColumnModel().getColumn(i);
-            if (i == 2) { // Status column
+            if (i == 2) { // model.Status column
                 column.setCellRenderer(statusRenderer);
             } else {
                 column.setCellRenderer(centerRenderer);

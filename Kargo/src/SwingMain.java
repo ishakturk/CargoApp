@@ -1,3 +1,6 @@
+import model.Client;
+import ui.LoginFrame;
+
 import javax.swing.*;
 
 import java.util.HashMap;

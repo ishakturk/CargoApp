@@ -1,3 +1,8 @@
+package ui;
+
+import model.CityNode;
+import model.CityTree;
+
 import javax.swing.*;
 import javax.swing.tree.*;
 import java.awt.*;

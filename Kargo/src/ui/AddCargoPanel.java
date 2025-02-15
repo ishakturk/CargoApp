@@ -1,3 +1,11 @@
+package ui;
+
+import model.Cargo;
+import model.CityTree;
+import model.Client;
+import model.Status;
+import service.CargoManager;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -42,7 +50,7 @@ public class AddCargoPanel extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.WEST;
         
-        // Cargo ID with mnemonic
+        // model.Cargo ID with mnemonic
         gbc.gridx = 0; gbc.gridy = 0;
         JLabel idLabel = new JLabel("Cargo ID:");
         idLabel.setDisplayedMnemonic('C');
@@ -70,7 +78,7 @@ public class AddCargoPanel extends JPanel {
         dateLabel.setLabelFor(dateField);
         formPanel.add(dateField, gbc);
         
-        // Status with mnemonic
+        // model.Status with mnemonic
         gbc.gridx = 0; gbc.gridy = 2;
         JLabel statusLabel = new JLabel("Status:");
         statusLabel.setDisplayedMnemonic('S');
