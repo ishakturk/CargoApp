@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+
 public class CargoPriorityQueue {
     private PriorityQueue<Cargo> cargoQueue;
     private CityNode root;
