@@ -1,7 +1,7 @@
 # Cargo Management System
 
 ## Overview
-This application is a console-based cargo management system developed in Java. It utilizes various data structures like Linked List, Priority Queue, Tree, Stack, and HashMap to efficiently manage cargo operations. The system is compiled using **JDK 23**, and the executable JAR file is named **kargouygulama.jar**.
+This application is a cargo management system developed in Java. It utilizes various data structures like Linked List, Priority Queue, Tree, Stack, and HashMap to efficiently manage cargo operations. The system is compiled using **JDK 23**, and the executable JAR file is named **kargouygulama.jar**.
 
 ## Features
 - **Customer Data Management** using Linked List
